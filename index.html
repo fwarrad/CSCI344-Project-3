@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>@2dO -- Interactive To Do App</title>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/app/app.css" /> 
+  </head>
+  <body>
+    <div class="tabs">
+      <a class="tab active" href="All">All</a>
+      <a class="tab" href="Categorized">Categorized</a>
+      <a class="tab" href="Edit">Edit</a>
+    </div>
+
+    <div class="content">
+      <div class="tab active" id="All"></div>
+      <div class="tab" id="Categorized">&nbsp;</div>
+      <div class="tab" id="Edit">
+        <textarea id="desc" rows="2" cols="50" placeholder="Enter Description..." autofocus></textarea><br>
+        <textarea id="categ" rows="1" cols="25" placeholder="Categories..."></textarea><br>
+        <button type="button" id="addToDo">Add ToDo</button>
+      </div>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="javascripts/app/app.js"></script>
+  </body>
+</html>
