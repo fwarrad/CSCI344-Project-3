@@ -40,11 +40,13 @@ body {
 .tabs {
   margin-top: 50px;
   margin-bottom:20px;
+  color:#fff;
 }
 
 .tabs .tab {
   background: #ccc;
   padding: 5px;
+  color:#000000;
 }
 
 .tabs .active {
@@ -55,24 +57,29 @@ body {
 
 .edit_tab_content .tab {
   display: none;
+  color:#fff;
 }
 
 .edit_tab_content .active {
   display: block;
+  color:#fff;
 }
 
 .item {
   border-style: solid;
   border-width: 1px;
   margin: 5px;
+  color:#fff;
 }
 
 .description {
   padding:0 0 0 5px;
+  color:#fff;
 }
 
 .categories {
   font-size: 9px;
   color: gray;
   padding: 0 0 0 10px;
+  color:#fff;
 }
