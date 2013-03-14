@@ -1,15 +1,15 @@
-/*jslint indent:4*/
-/*global $, document */
-
+var $ = window.$;
+var ctwitter = window.ctwitter; 
+var console = window.console; 
 var main = function () {
-    //count variable
+    //variable count
     var itemNum = 0;
     var totalTasks = 0;
 
     var buildCategorized = function () {
-        //clear previous content
+        //Remove old content
         $("#Categorized").children().remove();
-        //generate new content
+        //build new content
         var x, y;
         for (x = 0; x < totalTasks; x++) {
             var description = $(".description:eq(" + x + ")").html();
@@ -17,7 +17,7 @@ var main = function () {
             var categories = categoriesStr.split(" ");
             for (y = 0; y < categories.length; y++) {
                 if (categories[y] === undefined || categories[y] === '') {
-                    //do nothing
+                    //this does/adds nothing
                 } else {
                     if ($("#Categorized > .item").is("." + categories[y])) {
                         $("." + categories[y]).append("<p class='description'>"
