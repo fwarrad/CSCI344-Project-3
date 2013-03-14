@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>BizzyBee -- Interactive To Do App</title>
+    <title>BizzEBee -- Interactive To-Do App</title>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="stylesheets/app/app.css"/>
     <link rel="stylesheet" href="stylesheets/app/reset.css"/> 
@@ -11,10 +11,10 @@
   </head>
   <body>
     <div class='contentwrapper'>
-      <h1 class='h1-head'>Welcome to BizzyBee -- Interactive To Do App</h1>
+      <h1 class='h1-head'>Welcome to BizzEBee -- Interactive To-Do App</h1>
       <p>&nbsp</p>
-      <div id="instructions" class="instructions">
-        <h2>We help you keep track of your "bizzy" lives</h2>
+      <div id="announcement" class="announcement">
+        <h2>We help you keep track of your "bizzE" lives</h2>
       </div>
       
       <div class="tabs">
@@ -23,15 +23,16 @@
         <a class="tab" href="Edit">Edit</a>
       </div>
 
-      <div class="content">
+      <div class="edit_tab_content">
         <div class="tab active" id="All"></div>
         <div class="tab" id="Categorized">&nbsp;</div>
         <div class="tab" id="Edit">
-          <textarea id="desc" rows="2" cols="50" placeholder="Enter Description..." autofocus></textarea><br>
-          <textarea id="categ" rows="1" cols="25" placeholder="Categories..."></textarea><br>
-          <button type="button" id="addToDo">Add ToDo</button>
+          <textarea id="desc" rows="2" cols="50" placeholder="Enter Task..." autofocus></textarea><br>
+          <textarea id="categ" rows="1" cols="25" placeholder="Enter a Catagory..."></textarea><br>
+          <button type="button" id="addToDo">Add Task</button>
         </div>
-      </div>
+      </div> 
+      
     </div>
     
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
