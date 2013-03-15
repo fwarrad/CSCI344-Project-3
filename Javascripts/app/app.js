@@ -9,8 +9,10 @@ var main = function () {
     //Show & Hide
     $(".tabs").hide();
     $(".edit_tab_content").hide();
+    $(".resetButton").hide();
     $("#startButton").click(function () {
       $(".startButton").hide();
+      $(".resetButton").show();
       $(".tabs").delay(80000000).fadeIn(80000000).show();
       $(".edit_tab_content").delay(80000000).fadeIn(80000000).show();
     }); // end of .click function  

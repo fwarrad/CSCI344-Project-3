@@ -22,6 +22,10 @@
         <button id="startButton">Click to get Organized!</button>
       </div>
       
+      <div id="resetButton" class="resetButton">
+        <button id="reset" onclick="history.go(0)">Clear All Tasks</button>
+      </div>
+      
       <div class="tabs">
         <a class="tab active" href="All">All</a>
         <a class="tab" href="Categorized">Categorized</a>
@@ -35,10 +39,6 @@
           <textarea id="desc" rows="2" cols="50" placeholder="Enter Multiple Tasks for One Catagory..." autofocus></textarea><br>
           <textarea id="categ" rows="1" cols="25" placeholder="Enter a single Catagory..."></textarea><br>
           <button type="button" id="addTask">Add Task</button>
-        </div>
-        
-        <div id="resetButton" class="resetButton">
-          <button id="reset" onclick="history.go(0)">Clear All Tasks</button>
         </div>
       </div> 
       

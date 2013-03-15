@@ -32,17 +32,16 @@ body {
 
 .startButton {
   margin-top:10px;
-  margin-bottom:100px;
+  margin-bottom:0px;
   margin-right450px;
   margin-left:450px;
 }
 
 .resetButton {
   margin-top:10px;
-  margin-bottom:100px;
+  margin-bottom:0px;
   margin-right450px;
   margin-left:450px;
-  float: bottom;
 }
 
 .announcement h2 {
