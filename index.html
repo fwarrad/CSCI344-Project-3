@@ -10,11 +10,16 @@
     
   </head>
   <body>
+    
     <div class='contentwrapper'>
       <h1 class='h1-head'>Welcome to BizzEBee -- Interactive To-Do App</h1>
       <p>&nbsp</p>
       <div id="announcement" class="announcement">
         <h2>We help you keep track of your "bizzE" lives</h2>
+      </div>
+      
+      <div id="startButton" class="startButton">
+        <button id="startButton">Click to get Organized!</button>
       </div>
       
       <div class="tabs">
@@ -24,12 +29,16 @@
       </div>
 
       <div class="edit_tab_content">
-        <div class="tab active" id="All"></div>
+        <div class="tab active" id="All"> <p> Welcome, this is your All/Main view. To get started simply click on the Edit tab! </p> </div>
         <div class="tab" id="Categorized">&nbsp;</div>
         <div class="tab" id="Edit">
           <textarea id="desc" rows="2" cols="50" placeholder="Enter Multiple Tasks for One Catagory..." autofocus></textarea><br>
           <textarea id="categ" rows="1" cols="25" placeholder="Enter a single Catagory..."></textarea><br>
           <button type="button" id="addTask">Add Task</button>
+        </div>
+        
+        <div id="resetButton" class="resetButton">
+          <button id="reset" onclick="history.go(0)">Clear All Tasks</button>
         </div>
       </div> 
       

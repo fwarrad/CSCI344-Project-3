@@ -5,7 +5,16 @@ var main = function () {
     //variable count
     var itemNum = 0;
     var totalTasks = 0;
-
+    
+    //Show & Hide
+    $(".tabs").hide();
+    $(".edit_tab_content").hide();
+    $("#startButton").click(function () {
+      $(".startButton").hide();
+      $(".tabs").delay(80000000).fadeIn(80000000).show();
+      $(".edit_tab_content").delay(80000000).fadeIn(80000000).show();
+    }); // end of .click function  
+    
     var buildCategorized = function () {
         //Remove old content
         $("#Categorized").children().remove();
@@ -58,13 +67,11 @@ var main = function () {
         $("#All").append("<div class='item " + itemNum + "''>"
             + "<p class='description'>" + desc + "</p>"
             + "<p class='categories'>" + categories + "</p>"
-            + "<button type='button' class='remove' id='"
-            + itemNum
-            + "'>Remove</button>"
+            + "<button type='button' class='remove' id='" + itemNum + "'>Remove</button>"
             + "</div>");
         $("#" + itemNum).click(function () {
-            var toBeRemoved = $(this).attr("id");
-            $("." + toBeRemoved).remove();
+            var taskRemoved = $(this).attr("id");
+            $("." + taskRemoved).delay(80000000).fadeOut('slow').remove();
             totalTasks--;
         });
         itemNum++;
