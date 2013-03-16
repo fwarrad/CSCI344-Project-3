@@ -78,6 +78,7 @@ var main = function () {
         });
         itemNum++;
         totalTasks++;
+        $(".welcome").hide();
     };
 
     var buildUpaddTaskHandler = function () {
