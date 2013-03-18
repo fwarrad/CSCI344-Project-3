@@ -5,48 +5,49 @@
 
     <title>BizzEBee -- Interactive To-Do App</title>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="stylesheets/lib/reset.css"/> 
     <link rel="stylesheet" href="stylesheets/app/app.css"/>
-    <link rel="stylesheet" href="stylesheets/app/reset.css"/> 
     
   </head>
   <body>
-    
+      
     <div class='contentwrapper'>
-      <h1 class='h1-head'>Welcome to BizzEBee -- Interactive To-Do App</h1>
-      <p>&nbsp</p>
-      <div id="announcement" class="announcement">
-        <h2>We help you keep track of your "bizzE" lives</h2>
-      </div>
+      <div class='scroll'>
+		    <h1 class='h1-head'>Welcome to BizzEBee -- Interactive To-Do App</h1>
+			  <p>&nbsp;</p>
+		    <div id="announcement" class="announcement">
+			    <h2>We help you keep track of your "bizzE" lives</h2>
+			  </div>
       
-      <div id="startButton" class="startButton">
-        <button id="startButton">Click to get Organized!</button>
-      </div>
+			  <div id="newStartButton" class="startButton">
+				  <button id="startButton">Click to get Organized!</button>
+			  </div>
       
-      <div id="resetButton" class="resetButton">
-        <button id="reset" onclick="history.go(0)">Clear All Tasks</button>
-      </div>
+			  <div id="resetButton" class="resetButton">
+				  <button id="reset" onclick="history.go(0)">Restart App</button>
+			  </div>
       
-      <div class="tabs">
-        <a class="tab active" href="All">All Tasks</a>
-        <a class="tab" href="Categorized">Categorized Tasks</a>
-        <a class="tab" href="Edit">Edit/Add Task</a>
-      </div>
+			  <div class="tabs">
+			    <a class="tab active" href="All">All Tasks</a>
+				  <a class="tab" href="Categorized">Categorized Tasks</a>
+				  <a class="tab" href="Edit">Edit/Add Task</a>
+			  </div>
 
-      <div class="edit_tab_content">
-        <div class="tab active" id="All"> <div id="welcome" class="welcome"> Welcome, this is your All/Main view. To get started simply click on the Edit/Add Task tab! </div> </div>
-        <div class="tab" id="Categorized">&nbsp;</div>
-        <div class="tab" id="Edit">
-          <textarea id="desc" rows="2" cols="50" placeholder="Enter Multiple Tasks for One Catagory..." autofocus></textarea><br>
-          <textarea id="categ" rows="1" cols="25" placeholder="Enter a single Catagory..."></textarea><br>
-          <button type="button" id="addTask">Add Task</button>
-        </div>
-      </div> 
-      
+			  <div class="edit_tab_content">
+			  <div class="tab active" id="All"> <div id="welcome" class="welcome"> Welcome, this is your All/Main view. To get edit or add a task, simply click on the Edit/Add Task tab! </div> </div>
+			  <div class="tab" id="Categorized">&nbsp;</div>
+			  <div class="tab" id="Edit">
+				  <textarea id="desc" rows="2" cols="50" placeholder="Enter Multiple Tasks for One Catagory..." autofocus></textarea><br>
+				  <textarea id="categ" rows="1" cols="25" placeholder="Enter a single Catagory..."></textarea><br>
+				  <button type="button" id="addTask">Add Task</button>
+			  </div>
+      </div>
     </div>
     
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="javascripts/app/app.js"></script>
-    <script src="javascripts/lib/jquery.backstretch.min.js"></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/app/app.js"></script>
+    <script type="text/javascript" src="javascripts/lib/jquery.backstretch.min.js"></script>
     
     <script>
       // To attach Backstrech as the body's backgroun

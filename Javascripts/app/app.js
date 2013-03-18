@@ -21,7 +21,7 @@ var main = function () {
         //Remove old content
         $("#Categorized").children().remove();
         //build new content
-        var x, y;
+        var x, y; 
         for (x = 0; x < totalTasks; x++) {
             var description = $(".description:eq(" + x + ")").html();
             var categoriesStr = $(".categories:eq(" + x + ")").html();
@@ -41,7 +41,16 @@ var main = function () {
                             + categories[y]
                             + "</h4><p class='description'>"
                             + description
+                            + "<button type='button' class='remove' id='" + itemNum + "'>Remove</button>"
                             + "</p></div>");
+
+                            $("#"+itemNum).click(function () {
+                               var taskRemoved = $(this).attr("id");
+                                $("." + taskRemoved).fadeOut('slow').remove();
+                                totalTasks--;
+                                totalTasks++;
+                            });
+                            itemNum++;
                     }
                 }
             }
@@ -73,12 +82,11 @@ var main = function () {
             + "</div>");
         $("#" + itemNum).click(function () {
             var taskRemoved = $(this).attr("id");
-            $("." + taskRemoved).delay(80000000).fadeOut('slow').remove();
+            $("." + taskRemoved).fadeOut('slow').remove();
             totalTasks--;
         });
         itemNum++;
         totalTasks++;
-        $(".welcome").hide();
     };
 
     var buildUpaddTaskHandler = function () {
@@ -94,6 +102,7 @@ var main = function () {
     };
 
     var jsonInitializer = function () {
+        $(".welcome").show();
         $.getJSON("javascripts/lib/all.json", function (todos) {
             todos.forEach(function (todo) {
                 var categoriesString = "";
