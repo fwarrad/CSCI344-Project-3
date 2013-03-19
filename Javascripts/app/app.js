@@ -5,7 +5,8 @@ var main = function () {
     //variable count
     var itemNum = 0;
     var totalTasks = 0;
-    
+    var numTasks = 0;
+    var categTasks = 0;
     //Show & Hide
     $(".tabs").hide();
     $(".edit_tab_content").hide();
@@ -30,27 +31,28 @@ var main = function () {
                 if (categories[y] === undefined || categories[y] === '') {
                     //this does/adds nothing
                 } else {
-                    if ($("#Categorized > .item").is("." + categories[y])) {
-                        $("." + categories[y]).append("<p class='description'>"
-                            + description
+                  if ($("#Categorized > .item").is("." + categories[y])) {
+                        $("." + categories[y]).append("<p class='item'>"
+                            + categories[y]
                             + "</p>");
                     } else {
                         $("#Categorized").append("<div class='item "
-                            + categories[y]
+                            + numTasks
                             + "'><h4 class='categoryTitle'>"
                             + categories[y]
                             + "</h4><p class='description'>"
                             + description
-                            + "<button type='button' class='remove' id='" + itemNum + "'>Remove</button>"
+                            + "<button type='button' class='remove' id='" + numTasks + "'>Remove</button>"
                             + "</p></div>");
 
-                            $("#"+itemNum).click(function () {
-                               var taskRemoved = $(this).attr("id");
-                                $("." + taskRemoved).fadeOut('slow').remove();
-                                totalTasks--;
-                                totalTasks++;
+                            $("#"+ numTasks).click(function () {
+                              console.log("removed task from Category Tab");
+                              var taskRemoved = $(this).attr("id");
+                              $("." + taskRemoved).remove();
+                              categTasks--;  
                             });
-                            itemNum++;
+                            numTasks++;
+                            categTasks++;
                     }
                 }
             }
@@ -74,6 +76,21 @@ var main = function () {
         });
     };
 
+
+    var buildUpaddTaskHandler = function () {
+        $("#addTask").click(function () {
+            console.log("Added Task to All & Category Tab");
+            var desc = $("#desc").val();
+            var categories = $("#categ").val();
+
+        addTask(desc, categories);
+
+            $("#desc").val("");
+            $("#categ").val("");
+        });
+        
+    };
+    
     var addTask = function (desc, categories) {
         $("#All").append("<div class='item " + itemNum + "''>"
             + "<p class='description'>" + desc + "</p>"
@@ -81,24 +98,14 @@ var main = function () {
             + "<button type='button' class='remove' id='" + itemNum + "'>Remove</button>"
             + "</div>");
         $("#" + itemNum).click(function () {
+            console.log("removed task from All Tab");
             var taskRemoved = $(this).attr("id");
             $("." + taskRemoved).fadeOut('slow').remove();
             totalTasks--;
         });
         itemNum++;
+        numTasks++
         totalTasks++;
-    };
-
-    var buildUpaddTaskHandler = function () {
-        $("#addTask").click(function () {
-            var desc = $("#desc").val();
-            var categories = $("#categ").val();
-
-            addTask(desc, categories);
-
-            $("#desc").val("");
-            $("#categ").val("");
-        });
     };
 
     var jsonInitializer = function () {
@@ -110,6 +117,7 @@ var main = function () {
                     categoriesString = categoriesString + " " + category;
                 });
                 addTask(todo.description, categoriesString);
+                buildCategorized (todos.description, categoriesString);
             });
         });
     };
