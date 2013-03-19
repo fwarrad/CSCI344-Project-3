@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Ubuntu' sans-serif;
-  margin-top:150px;
+  margin-top:-50px;
   margin-bottom:125px;
   margin-right:50px;
   margin-left:50px;
@@ -12,7 +12,7 @@ body {
 .contentwrapper {
   background-color: rgba(0, 0, 0, 0.6);
   width: 1060px;
-  min-height: 332px;
+  min-height: 352px;
   margin-top:150px;
   margin-bottom:150px;
   margin-right:150px;
@@ -30,6 +30,13 @@ body {
   color:#fff;
 }
 
+.scroll {
+  width: 1060px;
+  height: 352px;
+  overflow: hidden;
+  overflow: scroll;
+}
+
 .startButton {
   margin-top:10px;
   margin-bottom:0px;
@@ -42,6 +49,11 @@ body {
   margin-bottom:0px;
   margin-right475px;
   margin-left:475px;
+}
+
+.remove {
+  float: left
+  color: red;
 }
 
 .announcement h2 {
