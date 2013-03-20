@@ -1,3 +1,9 @@
+CSCI344-Project-3
+=================
+
+
+**Assignment:**
+
 Build the client-side part of a ToDo list application.
 
 Your application should be a single-page app (no links to other pages). It should have a tabbed user interface with 3 tabs. First build the tab interface using the techniques that we learned in class.
@@ -29,5 +35,3 @@ Try doing things in this order:
 Your project should bootstrap itself by pulling a list of existing ToDos from a file called "all.json."
 
 You will be graded on (1) following the spec, (2) getting everything to work, (3) interface style, (4) user experience style, (5) code style -- don't forget to lint your html and javascript, (6) consistency in code, (7) consistency in github commits, (8) intangible creative aspects.
-
-Post a link to your github repo.
