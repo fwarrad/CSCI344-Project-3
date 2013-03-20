@@ -51,8 +51,8 @@ var main = function () {
                               $("." + taskRemoved).remove();
                               categTasks--;  
                             });
-                            numTasks++;
-                            categTasks++;
+                           numTasks++;
+                           categTasks++;
                     }
                 }
             }
@@ -107,7 +107,7 @@ var main = function () {
         numTasks++
         totalTasks++;
     };
-
+    
     var jsonInitializer = function () {
         $(".welcome").show();
         $.getJSON("javascripts/lib/all.json", function (todos) {
